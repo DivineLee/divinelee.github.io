@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1、创建一个web工程: 2、引入jar包和配置文件: * struts2:     * jar包:         struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar         struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar         struts-2.3.15.3">
+<meta name="description" content="1、创建一个web工程 2、引入jar包和配置文件: struts2:jar包:struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar struts-2.3.15.3\lib\struts2-spring-plugin-2.3.15.3">
 <meta name="keywords" content="SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH-搭建开发环境">
 <meta property="og:url" content="http://yoursite.com/2017/10/29/SSH-搭建开发环境/index.html">
 <meta property="og:site_name" content="divinelee&#39;s blog">
-<meta property="og:description" content="1、创建一个web工程: 2、引入jar包和配置文件: * struts2:     * jar包:         struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar         struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar         struts-2.3.15.3">
+<meta property="og:description" content="1、创建一个web工程 2、引入jar包和配置文件: struts2:jar包:struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar struts-2.3.15.3\lib\struts2-spring-plugin-2.3.15.3">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-29T10:40:49.994Z">
+<meta property="og:updated_time" content="2018-12-20T09:42:55.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH-搭建开发环境">
-<meta name="twitter:description" content="1、创建一个web工程: 2、引入jar包和配置文件: * struts2:     * jar包:         struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar         struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar         struts-2.3.15.3">
+<meta name="twitter:description" content="1、创建一个web工程 2、引入jar包和配置文件: struts2:jar包:struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar struts-2.3.15.3\lib\struts2-spring-plugin-2.3.15.3">
 
 
 
@@ -352,118 +352,106 @@
       
 
       
-        <p>1、创建一个web工程:</p>
-<p>2、引入jar包和配置文件:</p>
-<pre><code>* struts2:
-    * jar包:
-        struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar
-        struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar
-        struts-2.3.15.3\lib\struts2-spring-plugin-2.3.15.3.jar
-    * 配置文件:
-         * web.xml
-            &lt;!-- 配置Struts2的核心过滤器 --&gt;
-            &lt;filter&gt;
-                 &lt;filter-name&gt;struts2&lt;/filter-name&gt;
-                 &lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;
-             &lt;/filter&gt;
+        <h3 id="1、创建一个web工程"><a href="#1、创建一个web工程" class="headerlink" title="1、创建一个web工程"></a>1、创建一个web工程</h3><hr>
+<h3 id="2、引入jar包和配置文件"><a href="#2、引入jar包和配置文件" class="headerlink" title="2、引入jar包和配置文件:"></a>2、引入jar包和配置文件:</h3><hr>
+<h4 id="struts2"><a href="#struts2" class="headerlink" title="struts2:"></a>struts2:</h4><h5 id="jar包"><a href="#jar包" class="headerlink" title="jar包:"></a>jar包:</h5><pre><code>struts-2.3.15.3\apps\struts2-blank.war\WEB-INF\lib\*.jar
+struts-2.3.15.3\lib\struts2-json-plugin-2.3.15.3.jar
+struts-2.3.15.3\lib\struts2-spring-plugin-2.3.15.3.jar
+</code></pre><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件:"></a>配置文件:</h5><h6 id="web-xml"><a href="#web-xml" class="headerlink" title="web.xml"></a>web.xml</h6><pre><code>&lt;!-- 配置Struts2的核心过滤器 --&gt;
+&lt;filter&gt;
+    &lt;filter-name&gt;struts2&lt;/filter-name&gt;
+    &lt;filter-class&gt;
+    org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+    &lt;/filter-class&gt;
+&lt;/filter&gt;
 
-             &lt;filter-mapping&gt;
-                 &lt;filter-name&gt;struts2&lt;/filter-name&gt;
-                 &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-              &lt;/filter-mapping&gt;
-           * struts.xml 
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;struts2&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+</code></pre><h6 id="struts-xml"><a href="#struts-xml" class="headerlink" title="struts.xml"></a>struts.xml</h6><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring:"></a>Spring:</h4><h5 id="jar包-1"><a href="#jar包-1" class="headerlink" title="jar包:"></a>jar包:</h5><pre><code>Spring3.2 开发最基本jar包
+    spring-beans-3.2.0.RELEASE.jar
+    spring-context-3.2.0.RELEASE.jar
+    spring-core-3.2.0.RELEASE.jar
+    spring-expression-3.2.0.RELEASE.jar
+    com.springsource.org.apache.commons.logging-1.1.1.jar
+    com.springsource.org.apache.log4j-1.2.15.jar
+AOP开发
+    spring-aop-3.2.0.RELEASE.jar
+    spring-aspects-3.2.0.RELEASE.jar
+    com.springsource.org.aopalliance-1.0.0.jar
+    com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
+Spring Jdbc开发
+    spring-jdbc-3.2.0.RELEASE.jar
+    spring-tx-3.2.0.RELEASE.jar
+Spring事务管理
+    spring-tx-3.2.0.RELEASE.jar
+Spring整合其他ORM框架
+    spring-orm-3.2.0.RELEASE.jar
+Spring在web中使用
+    spring-web-3.2.0.RELEASE.jar
+Spring整合Junit测试
+    spring-test-3.2.0.RELEASE.jar
+</code></pre><h5 id="配置文件-1"><a href="#配置文件-1" class="headerlink" title="配置文件:"></a>配置文件:</h5><h6 id="web-xml-1"><a href="#web-xml-1" class="headerlink" title="web.xml"></a>web.xml</h6><pre><code>&lt;!-- 配置Spring的核心监听器 --&gt;
+    &lt;listener&gt;
+        &lt;listener-class&gt;
+        org.springframework.web.context.ContextLoaderListener
+        &lt;/listener-class&gt;
+    &lt;/listener&gt;
 
-* Spring:
-    * jar包:
-        Spring3.2 开发最基本jar包
-            spring-beans-3.2.0.RELEASE.jar
-            spring-context-3.2.0.RELEASE.jar
-            spring-core-3.2.0.RELEASE.jar
-            spring-expression-3.2.0.RELEASE.jar
-            com.springsource.org.apache.commons.logging-1.1.1.jar
-            com.springsource.org.apache.log4j-1.2.15.jar
-        AOP开发
-            spring-aop-3.2.0.RELEASE.jar
-            spring-aspects-3.2.0.RELEASE.jar
-            com.springsource.org.aopalliance-1.0.0.jar
-            com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
-        Spring Jdbc开发
-            spring-jdbc-3.2.0.RELEASE.jar
-            spring-tx-3.2.0.RELEASE.jar
-        Spring事务管理
-            spring-tx-3.2.0.RELEASE.jar
-        Spring整合其他ORM框架
-            spring-orm-3.2.0.RELEASE.jar
-        Spring在web中使用
-            spring-web-3.2.0.RELEASE.jar
-        Spring整合Junit测试
-            spring-test-3.2.0.RELEASE.jar
-    * 配置文件:
-        * web.xml
-             &lt;!-- 配置Spring的核心监听器 --&gt;
-             &lt;listener&gt;
-                 &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
-             &lt;/listener&gt;
-
-             &lt;context-param&gt;
-                 &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-                 &lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt;
-             &lt;/context-param&gt;
-        * applicationContext.xml
-        * log4j.properties
-
-* Hibernate:
-    * jar包:
-        hibernate-distribution-3.6.10.Final\hibernate3.jar
-        hibernate-distribution-3.6.10.Final\lib\required\*.jar
-        hibernate-distribution-3.6.10.Final\lib\jpa\*.jar
-        * slf4j-log4j整合的jar包 :
-        * 数据库驱动:
-        * 连接池:(c3p0连接池)
-    * 配置文件:
-        * 没有hibernate的核心配置文件的方式整合:
-        * 映射文件:
-</code></pre><p>3、配置基本配置信息:</p>
-<pre><code>* C3P0连接池:
-* 引入外部属性文件:
-    * jdbc.properties
-* 配置连接池:
-     &lt;!-- 配置连接池: --&gt;
-     &lt;!-- 引入外部属性文件 --&gt;
-     &lt;context:property-placeholder location=&quot;classpath:jdbc.properties&quot;/&gt;
-     &lt;!-- 配置C3P0连接池: --&gt;
-     &lt;bean id=&quot;dataSource&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
+    &lt;context-param&gt;
+        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+        &lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt;
+    &lt;/context-param&gt;
+</code></pre><h6 id="applicationContext-xml"><a href="#applicationContext-xml" class="headerlink" title="applicationContext.xml"></a>applicationContext.xml</h6><h6 id="log4j-properties"><a href="#log4j-properties" class="headerlink" title="log4j.properties"></a>log4j.properties</h6><h4 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate:"></a>Hibernate:</h4><h5 id="jar包-2"><a href="#jar包-2" class="headerlink" title="jar包:"></a>jar包:</h5><pre><code>    hibernate-distribution-3.6.10.Final\hibernate3.jar
+    hibernate-distribution-3.6.10.Final\lib\required\*.jar
+    hibernate-distribution-3.6.10.Final\lib\jpa\*.jar
+slf4j-log4j整合的jar包 :
+数据库驱动:
+连接池:(c3p0连接池)
+配置文件:
+没有hibernate的核心配置文件的方式整合:
+映射文件:
+</code></pre><h3 id="3、配置基本配置信息"><a href="#3、配置基本配置信息" class="headerlink" title="3、配置基本配置信息:"></a>3、配置基本配置信息:</h3><hr>
+<h5 id="C3P0连接池"><a href="#C3P0连接池" class="headerlink" title="C3P0连接池:"></a>C3P0连接池:</h5><pre><code>引入外部属性文件:
+    jdbc.properties
+配置连接池:
+    &lt;!-- 配置连接池: --&gt;
+    &lt;!-- 引入外部属性文件 --&gt;
+    &lt;context:property-placeholder location=&quot;classpath:jdbc.properties&quot;/&gt;
+    &lt;!-- 配置C3P0连接池: --&gt;
+    &lt;bean id=&quot;dataSource&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
          &lt;property name=&quot;driverClass&quot; value=&quot;${jdbc.driver}&quot;/&gt;
          &lt;property name=&quot;jdbcUrl&quot; value=&quot;${jdbc.url}&quot;/&gt;
          &lt;property name=&quot;user&quot; value=&quot;${jdbc.user}&quot;/&gt;
          &lt;property name=&quot;password&quot; value=&quot;${jdbc.password}&quot;/&gt;
+    &lt;/bean&gt;
+Hibernate相关信息:
+    &lt;!-- Hibernate的相关信息 --&gt;
+    &lt;bean id=&quot;sessionFactory&quot; class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
+        &lt;!-- 注入连接池 --&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
+        &lt;!-- 配置Hibernate的其他的属性 --&gt;
+        &lt;property name=&quot;hibernateProperties&quot;&gt;
+            &lt;props&gt;
+                &lt;prop key=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/prop&gt;
+                &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
+                &lt;prop key=&quot;hibernate.format_sql&quot;&gt;true&lt;/prop&gt;
+                &lt;prop key=&quot;hibernate.connection.autocommit&quot;&gt;false&lt;/prop&gt;
+                    &lt;prop key=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/prop&gt;
+            &lt;/props&gt;
+        &lt;/property&gt;
+        &lt;!-- 配置Hibernate的映射文件 --&gt;  
      &lt;/bean&gt;
-* Hibernate相关信息:
-     &lt;!-- Hibernate的相关信息 --&gt;
-     &lt;bean id=&quot;sessionFactory&quot; class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
-         &lt;!-- 注入连接池 --&gt;
-         &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
-         &lt;!-- 配置Hibernate的其他的属性 --&gt;
-         &lt;property name=&quot;hibernateProperties&quot;&gt;
-             &lt;props&gt;
-                 &lt;prop key=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/prop&gt;
-                 &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
-                 &lt;prop key=&quot;hibernate.format_sql&quot;&gt;true&lt;/prop&gt;
-                 &lt;prop key=&quot;hibernate.connection.autocommit&quot;&gt;false&lt;/prop&gt;
-                 &lt;prop key=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/prop&gt;
-             &lt;/props&gt;
-         &lt;/property&gt;
-         &lt;!-- 配置Hibernate的映射文件 --&gt;  
-     &lt;/bean&gt;
-* 事务管理:
-     &lt;!-- 事务管理: --&gt;
-     &lt;!-- 事务管理器 --&gt;
-     &lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;
-         &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot;/&gt;
-     &lt;/bean&gt;
+事务管理:
+    &lt;!-- 事务管理: --&gt;
+    &lt;!-- 事务管理器 --&gt;
+    &lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;
+        &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot;/&gt;
+    &lt;/bean&gt;
 
-     &lt;!-- 开启注解事务 --&gt;
-     &lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;/&gt;
+    &lt;!-- 开启注解事务 --&gt;
+    &lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;/&gt;
 </code></pre>
       
     </div>
@@ -554,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -629,6 +626,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、创建一个web工程"><span class="nav-number">1.</span> <span class="nav-text">1、创建一个web工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、引入jar包和配置文件"><span class="nav-number">2.</span> <span class="nav-text">2、引入jar包和配置文件:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#struts2"><span class="nav-number">2.1.</span> <span class="nav-text">struts2:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#jar包"><span class="nav-number">2.1.1.</span> <span class="nav-text">jar包:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置文件"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置文件:</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#web-xml"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">web.xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#struts-xml"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">struts.xml</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring"><span class="nav-number">2.2.</span> <span class="nav-text">Spring:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#jar包-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">jar包:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置文件-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">配置文件:</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#web-xml-1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">web.xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#applicationContext-xml"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">applicationContext.xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#log4j-properties"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">log4j.properties</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hibernate"><span class="nav-number">2.3.</span> <span class="nav-text">Hibernate:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#jar包-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">jar包:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、配置基本配置信息"><span class="nav-number">3.</span> <span class="nav-text">3、配置基本配置信息:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C3P0连接池"><span class="nav-number">3.0.1.</span> <span class="nav-text">C3P0连接池:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
